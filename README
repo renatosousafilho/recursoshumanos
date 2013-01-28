@@ -1,0 +1,5 @@
+Esta é uma aplicação para cadastro de funcionarios, funcões e setores de uma organização simulando um pequeno sistema de recursos humanos.
+
+
+Desenvolvido com Rails 3. 
+Usando a Gem Nested Form
