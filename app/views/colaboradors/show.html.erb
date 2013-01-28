@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @colaborador.nome %>
+</p>
+
+<p>
+  <b>Cpf:</b>
+  <%= @colaborador.cpf %>
+</p>
+
+
+<%= link_to 'Edit', edit_colaborador_path(@colaborador) %> |
+<%= link_to 'Back', colaboradors_path %>

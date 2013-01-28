@@ -1,0 +1,30 @@
+<%= nested_form_for(@departamento) do |f| %>
+  <% if @departamento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@departamento.errors.count, "error") %> prohibited this departamento from being saved:</h2>
+
+      <ul>
+      <% @departamento.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :descricao %><br />
+    <%= f.text_area :descricao %>
+  </div>
+  <div class="field">
+    <%= f.fields_for :departamento_funcionarios do |builder| %>
+       <%= render 'departamento_funcionarios', :f => builder %>
+    <% end %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

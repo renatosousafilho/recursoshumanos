@@ -1,0 +1,4 @@
+<tr>
+         <td><%= f.select :colaborador_id, Colaborador.all.map { |c| [c.id, c.nome] }, include_blank: true %></td>
+         <td><%= f.select :cargo_id, Cargo.all.map { |c| [c.id, c.nome] }, include_blank: true %></td>
+      </tr>
